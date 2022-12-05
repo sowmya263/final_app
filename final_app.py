@@ -92,9 +92,9 @@ final2
 #"winner","win_by_runs","win_by_wickets","player_of_match"
 
 #scatter and correlation coefficient
-st.header("Pick two variables for your scatterplot")
-x_val = st.selectbox("Pick your x-axis",dataset.columns.tolist())
-y_val = st.selectbox("Pick your y-axis",dataset.columns.tolist())
+#st.header("Pick two variables for your scatterplot")
+#x_val = st.selectbox("Pick your x-axis",dataset.columns.tolist())
+#y_val = st.selectbox("Pick your y-axis",dataset.columns.tolist())
 
 #toss decisions and win by wickets
 toss_decisions = dataset.groupby(['toss_decision'])['toss_decision'].count().reset_index(name = 'count')
