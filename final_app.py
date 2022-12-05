@@ -29,6 +29,7 @@ df["date"] = pd.to_datetime(df["date"])
 
 df["year"] = df["date"].dt.year
 dataset = df.drop(columns=["date","Season"])
+st.title("Dataset")
 dataset
 st.title("Bar Graph of Matches year wise")
 matches_year = dataset.groupby(["year"])['year'].count().reset_index(name='count')
