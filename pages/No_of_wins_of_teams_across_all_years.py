@@ -25,7 +25,7 @@ df["toss_winner"] = df["toss_winner"].map(mapping)
 df["winner"] = df["winner"].map(mapping)
 
 
-df["date"] = pd.to_datetime(df["date"])
+df["date"] = pd.to_datetime(df["date"], errors = 'coerce')
 
 df["year"] = df["date"].dt.year
 dataset = df.drop(columns=["date","Season"])
